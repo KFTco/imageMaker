@@ -429,7 +429,7 @@ $(this).each(function (delta) {
        find_highest_ZIndex: function(){
        return  Math.max.apply(null, $.map($('body *'), function(e,n) {
                                 if ($(e).css('position') != 'static')
-                                   return parseInt($(e).css('z-index')) || 1;
+                                   return parseInt($(e).css('z-index'))+1 || 1;
                    }));
     
     }
